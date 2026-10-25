@@ -1,0 +1,96 @@
+{
+ "Q06": {
+  "id": "Q06",
+  "answer": "The policy sets the evening‑meal claim limit at £30 per person [expenses#travel-and-meals]. It does not specify a claim deadline, so that information isn’t covered in the HR policies. If you need the deadline, please contact the People team at people@northstar-demo.example.",
+  "citations": [
+   "expenses#travel-and-meals"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "expenses#travel-and-meals",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.057599206
+   }
+  ],
+  "context": "<excerpt id=\"expenses#travel-and-meals\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Travel and meals\n\nBook standard-class rail travel. A business-trip evening meal may be claimed up to £30 per person, including service charges. Alcohol is not reimbursed. Normal home-to-office commuting is not reimbursed, including the office days required by the remote working policy. Taxis require advance line-manager approval unless there is an immediate safety concern; explain any exception in the claim.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.56,
+   "generation": 0.83
+  },
+  "model": "openai/gpt-oss-120b",
+  "judge": {
+   "answer_score": 1,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "retrieval",
+   "rationale": "The assistant correctly identified the £30 meal cap from the provided excerpt but failed to correct the 60-day deadline premise to 30 days, as the reference answer requires. This is likely due to the claim deadline information being missing from the provided excerpts (retrieval failure), preventing the assistant from fully correcting the user's outdated premise."
+  }
+ },
+ "Q21": {
+  "id": "Q21",
+  "answer": "The HR policies state that expense claims must be submitted **within 30 calendar days of the purchase date**[expenses#eligibility-and-submission].",
+  "citations": [
+   "expenses#eligibility-and-submission"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "expenses#eligibility-and-submission",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.9022657
+   },
+   {
+    "id": "expenses#approval-and-payment",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.047869004
+   },
+   {
+    "id": "expenses#home-office-purchases",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.03085051
+   },
+   {
+    "id": "onboarding#first-week",
+    "source_uri": "data/onboarding.md",
+    "rerank": 0.014227047
+   }
+  ],
+  "context": "<excerpt id=\"expenses#eligibility-and-submission\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Eligibility and submission\n\nEmployees may claim reasonable, necessary business expenses through SpendTrack. Submit claims within 30 calendar days of the purchase date. Attach an itemised receipt and state the business purpose. A missing receipt requires written approval from Finance before submission; a bank statement alone is not an itemised receipt.\n</excerpt>\n\n<excerpt id=\"expenses#approval-and-payment\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Approval and payment\n\nYour line manager approves claims up to and including £500. Claims above £500 also need Finance approval from Daniel Reed. Approved claims are paid in the next Friday payment run if Finance receives them by Tuesday at 12:00; later claims move to the following Friday. This policy cannot show whether an individual payment has been made.\n</excerpt>\n\n<excerpt id=\"expenses#home-office-purchases\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Home-office purchases\n\nApply the eligibility, approval and £150 annual limit in the remote working policy before submitting a home-office claim. The £30 meal limit does not apply to home-office equipment. Purchases without the required advance approval are referred to Finance for review; payment is not guaranteed.\n</excerpt>\n\n<excerpt id=\"onboarding#first-week\" document=\"New starter onboarding\" doc_id=\"NS-ONBOARDING\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nNew starter onboarding > First week\n\nComplete information security and code of conduct training within 5 working days of starting. Your line manager agrees your first-month goals by the end of working day 5. Read the annual leave, sickness absence and expenses policies before making related requests or claims.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 0.57,
+   "generation": 0.23
+  },
+  "model": "openai/gpt-oss-120b",
+  "judge": {
+   "answer_score": 1,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "generation",
+   "rationale": "The answer correctly identifies the 30-day deadline and cites the correct excerpt, but it is incomplete as it omits the required submission method (SpendTrack) and supporting documentation (itemised receipt and business purpose) included in the reference answer."
+  }
+ },
+ "Q40": {
+  "id": "Q40",
+  "answer": "I can't find this in the HR policies available to you, so I can't answer it reliably. Please contact the People team at people@northstar-demo.example.",
+  "citations": [],
+  "invalid_citations": [],
+  "hits": [],
+  "context": "",
+  "latency_s": {
+   "retrieval": 0.64,
+   "generation": 0.0
+  },
+  "model": null,
+  "judge": {
+   "answer_score": 0,
+   "citation_score": null,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "retrieval",
+   "rationale": "The reference answer indicates the user's premise is based on an expired policy and provides the current rules, but the assistant was given no excerpts to support this correction. Consequently, the assistant could not provide the correct answer and defaulted to a refusal, missing the opportunity to correct the outdated premise."
+  }
+ }
+}

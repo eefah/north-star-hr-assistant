@@ -1,0 +1,115 @@
+{
+ "Q06": {
+  "id": "Q06",
+  "answer": "The current policy sets the business‑trip evening‑meal cap at **£30 per person** [expenses#travel-and-meals].  \n\nThe excerpts do not contain a current claim‑deadline rule (the only deadline mentioned (60 days) is in an expired version) [expenses_expired#superseded-rules].  \n\nFor the exact claim‑deadline you’ll need to check the latest HR policies or contact the People team at people@northstar-demo.example.",
+  "citations": [
+   "expenses#travel-and-meals",
+   "expenses_expired#superseded-rules"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "expenses_expired#superseded-rules",
+    "source_uri": "negative_examples/expenses_expired.md",
+    "rerank": 0.9780517
+   },
+   {
+    "id": "expenses#travel-and-meals",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.057599206
+   }
+  ],
+  "context": "<excerpt id=\"expenses_expired#superseded-rules\" document=\"Business expenses - expired version\" doc_id=\"NS-EXPENSES\" version=\"1.0\" status=\"expired\" effective_from=\"20251001\">\nBusiness expenses - expired version > Superseded rules\n\nSubmit claims within 60 calendar days of purchase. The business-trip evening meal cap is £40 per person. These rules were replaced on 1 October 2026.\n</excerpt>\n\n<excerpt id=\"expenses#travel-and-meals\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Travel and meals\n\nBook standard-class rail travel. A business-trip evening meal may be claimed up to £30 per person, including service charges. Alcohol is not reimbursed. Normal home-to-office commuting is not reimbursed, including the office days required by the remote working policy. Taxis require advance line-manager approval unless there is an immediate safety concern; explain any exception in the claim.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.45,
+   "generation": 0.99
+  },
+  "model": "openai/gpt-oss-120b",
+  "judge": {
+   "answer_score": 1,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "retrieval",
+   "rationale": "The assistant correctly identified the current meal cap and correctly noted the 60-day deadline was from an expired version, but it failed to provide the current 30-day deadline because that specific rule was not present in the provided excerpts. The reference answer expects the 30-day deadline to be stated, which the assistant could not do based on the given evidence."
+  }
+ },
+ "Q21": {
+  "id": "Q21",
+  "answer": "The current policy requires you to submit expense claims within **30 calendar days of the purchase date**[expenses#eligibility-and-submission].",
+  "citations": [
+   "expenses#eligibility-and-submission"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "expenses#eligibility-and-submission",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.9022657
+   },
+   {
+    "id": "expenses_expired#superseded-rules",
+    "source_uri": "negative_examples/expenses_expired.md",
+    "rerank": 0.679923
+   },
+   {
+    "id": "expenses#approval-and-payment",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.047869004
+   },
+   {
+    "id": "expenses#home-office-purchases",
+    "source_uri": "data/expenses.md",
+    "rerank": 0.03085051
+   },
+   {
+    "id": "onboarding#first-week",
+    "source_uri": "data/onboarding.md",
+    "rerank": 0.014227047
+   }
+  ],
+  "context": "<excerpt id=\"expenses#eligibility-and-submission\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Eligibility and submission\n\nEmployees may claim reasonable, necessary business expenses through SpendTrack. Submit claims within 30 calendar days of the purchase date. Attach an itemised receipt and state the business purpose. A missing receipt requires written approval from Finance before submission; a bank statement alone is not an itemised receipt.\n</excerpt>\n\n<excerpt id=\"expenses_expired#superseded-rules\" document=\"Business expenses - expired version\" doc_id=\"NS-EXPENSES\" version=\"1.0\" status=\"expired\" effective_from=\"20251001\">\nBusiness expenses - expired version > Superseded rules\n\nSubmit claims within 60 calendar days of purchase. The business-trip evening meal cap is £40 per person. These rules were replaced on 1 October 2026.\n</excerpt>\n\n<excerpt id=\"expenses#approval-and-payment\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Approval and payment\n\nYour line manager approves claims up to and including £500. Claims above £500 also need Finance approval from Daniel Reed. Approved claims are paid in the next Friday payment run if Finance receives them by Tuesday at 12:00; later claims move to the following Friday. This policy cannot show whether an individual payment has been made.\n</excerpt>\n\n<excerpt id=\"expenses#home-office-purchases\" document=\"Business expenses\" doc_id=\"NS-EXPENSES\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nBusiness expenses > Home-office purchases\n\nApply the eligibility, approval and £150 annual limit in the remote working policy before submitting a home-office claim. The £30 meal limit does not apply to home-office equipment. Purchases without the required advance approval are referred to Finance for review; payment is not guaranteed.\n</excerpt>\n\n<excerpt id=\"onboarding#first-week\" document=\"New starter onboarding\" doc_id=\"NS-ONBOARDING\" version=\"2.0\" status=\"current\" effective_from=\"20261001\">\nNew starter onboarding > First week\n\nComplete information security and code of conduct training within 5 working days of starting. Your line manager agrees your first-month goals by the end of working day 5. Read the annual leave, sickness absence and expenses policies before making related requests or claims.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 1.27,
+   "generation": 0.22
+  },
+  "model": "openai/gpt-oss-120b",
+  "judge": {
+   "answer_score": 1,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "generation",
+   "rationale": "The answer correctly identifies the 30-day deadline and cites the right excerpt, but it omits the required submission method (SpendTrack) and supporting documentation (itemised receipt and business purpose) specified in the reference answer."
+  }
+ },
+ "Q40": {
+  "id": "Q40",
+  "answer": "The 60‑day submission deadline and the £40 dinner cap were part of the **expired** rules that were replaced on 1 October 2026 [expenses_expired#superseded-rules]. Therefore those limits are no longer the current policy. For the up‑to‑date expense rules, please contact the People team at people@northstar-demo.example.",
+  "citations": [
+   "expenses_expired#superseded-rules"
+  ],
+  "invalid_citations": [],
+  "hits": [
+   {
+    "id": "expenses_expired#superseded-rules",
+    "source_uri": "negative_examples/expenses_expired.md",
+    "rerank": 0.8224745
+   }
+  ],
+  "context": "<excerpt id=\"expenses_expired#superseded-rules\" document=\"Business expenses - expired version\" doc_id=\"NS-EXPENSES\" version=\"1.0\" status=\"expired\" effective_from=\"20251001\">\nBusiness expenses - expired version > Superseded rules\n\nSubmit claims within 60 calendar days of purchase. The business-trip evening meal cap is £40 per person. These rules were replaced on 1 October 2026.\n</excerpt>",
+  "latency_s": {
+   "retrieval": 0.69,
+   "generation": 0.4
+  },
+  "model": "openai/gpt-oss-120b",
+  "judge": {
+   "answer_score": 1,
+   "citation_score": 2,
+   "faithful": true,
+   "unsupported_claims": [],
+   "failure_type": "retrieval",
+   "rationale": "The assistant correctly identified the premise as outdated and cited the expired policy accurately, but failed to provide the current rules (30 days, £30 cap) which are present in the reference answer but missing from the provided excerpts."
+  }
+ }
+}

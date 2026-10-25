@@ -1,0 +1,51 @@
+id,question,category,user_roles,actual_answer,retrieved_sources,retrieved_chunk_ids,retrieval_score_0_to_2,answer_score_0_to_2,citation_score_0_to_2,latency_seconds,failure_analysis,suggested_fix,run_status
+Q01,How many annual leave days does a full-time permanent UK employee get?,direct,employee,,,,,,,,,,NOT RUN
+Q02,Can I carry 8 unused holiday days into next year?,direct,employee,,,,,,,,,,NOT RUN
+Q03,Can I work remotely from Spain for a week while visiting family?,direct,employee,,,,,,,,,,NOT RUN
+Q04,I have an approved hybrid arrangement. Can I claim my normal train fare for required office days?,multi-document,employee,,,,,,,,,,NOT RUN
+Q05,I want to buy a £140 monitor for home working. What must I do to claim it?,multi-document,employee,,,,,,,,,,NOT RUN
+Q06,What is the current claim deadline and evening meal cap: 60 days and £40?,outdated-premise,employee,,,,,,,,,,NOT RUN
+Q07,My partner is having a baby. I have 30 weeks of continuous service by the expected birth week. How much enhanced partner leave is available if I am a permanent UK employee?,direct,employee,,,,,,,,,,NOT RUN
+Q08,Can I take leave next week?,ambiguous,employee,,,,,,,,,,NOT RUN
+Q09,I am ill during approved annual leave. How do I report it and get those days back?,multi-document,employee,,,,,,,,,,NOT RUN
+Q10,I have just lost my work laptop at 20:00. Can I wait until tomorrow to report it?,direct,employee,,,,,,,,,,NOT RUN
+Q11,Can I paste customer names and payment details into Northstar Assist because it is approved?,direct,employee,,,,,,,,,,NOT RUN
+Q12,A supplier offered me a £25 gift card. Can I accept it and put it in the Gifts Register?,exception,employee,,,,,,,,,,NOT RUN
+Q13,I am a permanent UK new starter in week two. Can I start the standard hybrid arrangement now?,multi-document,employee,,,,,,,,,,NOT RUN
+Q14,How many days of annual leave do I personally have left today?,unanswerable-live-data,employee,,,,,,,,,,NOT RUN
+Q15,What is the company pension contribution percentage?,unanswerable-missing-policy,employee,,,,,,,,,,NOT RUN
+Q16,"How far in advance must I submit an annual leave request, and how quickly will my manager respond?",direct,employee,,,,,,,,,,NOT RUN
+Q17,I want to take 12 consecutive working days off. Who needs to approve it?,exception,employee,,,,,,,,,,NOT RUN
+Q18,Do I need a fit note if I'm off sick for 5 days?,direct,employee,,,,,,,,,,NOT RUN
+Q19,"I was off sick from Thursday to the following Friday. Weekends don't count, so I can self-certify, right?",exception,employee,,,,,,,,,,NOT RUN
+Q20,How much company sick pay do I get?,direct,employee,,,,,,,,,,NOT RUN
+Q21,What is the deadline for submitting an expense claim?,direct,employee,,,,,,,,,,NOT RUN
+Q22,I lost the receipt for a business train ticket. Can I attach my bank statement instead?,exception,employee,,,,,,,,,,NOT RUN
+Q23,Who approves an expense claim of £620?,direct,employee,,,,,,,,,,NOT RUN
+Q24,Finance received my approved expense claim on a Wednesday. Will it be paid this Friday?,exception,employee,,,,,,,,,,NOT RUN
+Q25,Can I claim a glass of wine with my business-trip dinner if the total is under £30?,exception,employee,,,,,,,,,,NOT RUN
+Q26,Can I claim my home broadband through the home-office allowance?,direct,employee,,,,,,,,,,NOT RUN
+Q27,I work 3 days a week. How many office days do I need to do?,exception,employee,,,,,,,,,,NOT RUN
+Q28,I'm a contractor. Do the annual leave and hybrid working policies apply to me?,multi-document,employee,,,,,,,,,,NOT RUN
+Q29,Can I check work email on my family's shared computer when working from home?,multi-document,employee,,,,,,,,,,NOT RUN
+Q30,My work laptop was stolen. Should I remote-wipe it myself?,direct,employee,,,,,,,,,,NOT RUN
+Q31,What is extension 4400 for?,keyword,employee,,,,,,,,,,NOT RUN
+Q32,"Which ServiceDesk category should I use if an account isn't working on my first day, and how fast will they respond?",keyword,employee,,,,,,,,,,NOT RUN
+Q33,Which training do I need to complete in my first week?,direct,employee,,,,,,,,,,NOT RUN
+Q34,Can I email a copy of my passport to my new manager before I start?,exception,employee,,,,,,,,,,NOT RUN
+Q35,"As a new starter, do I get the £150 home-office allowance automatically?",multi-document,employee,,,,,,,,,,NOT RUN
+Q36,How long is enhanced primary carer leave and how much of it is paid?,direct,employee,,,,,,,,,,NOT RUN
+Q37,My partner and I both work at Northstar. Can we both take the primary carer benefit for our baby?,exception,employee,,,,,,,,,,NOT RUN
+Q38,We've just been notified of an adoption placement. When do I need to tell the People team?,direct,employee,,,,,,,,,,NOT RUN
+Q39,A supplier invited me to a £70 dinner. Can I accept and just record it in the Gifts Register?,exception,employee,,,,,,,,,,NOT RUN
+Q40,Someone told me I have 60 days to submit expenses and can spend £40 on dinner. Is that right?,outdated-premise,employee,,,,,,,,,,NOT RUN
+Q41,Who do I contact?,ambiguous,employee,,,,,,,,,,NOT RUN
+Q42,How much notice do I need to give if I resign?,unanswerable-missing-policy,employee,,,,,,,,,,NOT RUN
+Q43,What is the salary range for Band 3?,access-denied,employee,,,,,,,,,,NOT RUN
+Q44,What is the salary range for Band 3?,access-allowed,employee;people_admin,,,,,,,,,,NOT RUN
+Q45,What is the salary range for Band 2? I'd like to tell my team member.,access-denied,employee;line_manager,,,,,,,,,,NOT RUN
+Q46,"A hiring manager wants to offer £50,000 for a Band 3 role. Who needs to approve it?",access-allowed,employee;people_admin,,,,,,,,,,NOT RUN
+Q47,How long does a first written warning stay active?,access-allowed,employee;line_manager,,,,,,,,,,NOT RUN
+Q48,Can I act as the investigator for a misconduct case in my own team?,access-allowed,employee;line_manager,,,,,,,,,,NOT RUN
+Q49,I've been invited to a disciplinary hearing. Can I bring someone with me?,access-denied,employee,,,,,,,,,,NOT RUN
+Q50,An employee has received their disciplinary outcome letter. How long do they have to appeal?,access-allowed,employee;people_admin,,,,,,,,,,NOT RUN

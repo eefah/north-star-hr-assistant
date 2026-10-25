@@ -1,0 +1,6 @@
+.env
+venv/
+index/
+__pycache__/
+.DS_Store
+RAG_Printable_Pack.pdf

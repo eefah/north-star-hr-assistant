@@ -1,0 +1,325 @@
+[
+  {
+    "id": "Q01",
+    "question": "How many annual leave days does a full-time permanent UK employee get?",
+    "category": "direct",
+    "expected_answer": "25 paid days per calendar year, plus England and Wales bank holidays.",
+    "expected_documents": [
+      "data/annual_leave.md"
+    ],
+    "relevant_passages": [
+      {
+        "source_uri": "data/annual_leave.md",
+        "heading": "Eligibility",
+        "exact_text": "Permanent UK employees receive 25 days of paid annual leave per calendar year, plus England and Wales bank holidays. Part-time entitlement is pro-rated by contracted weekly hours. Contractors are outside this policy. The leave year runs from 1 January to 31 December."
+      }
+    ],
+    "negative_examples": [],
+    "edge_case": false,
+    "review_status": "author-written synthetic ground truth; not SME-verified"
+  },
+  {
+    "id": "Q02",
+    "question": "Can I carry 8 unused holiday days into next year?",
+    "category": "direct",
+    "expected_answer": "The stated normal limit is 5 days, with approval recorded by 15 December, to be used by 31 March. Refer unspecified statutory or contractual exceptions to People.",
+    "expected_documents": [
+      "data/annual_leave.md"
+    ],
+    "relevant_passages": [
+      {
+        "source_uri": "data/annual_leave.md",
+        "heading": "Carry-over",
+        "exact_text": "Up to 5 unused days may be carried into the next calendar year with line-manager approval recorded by 15 December. Carried days must be used by 31 March. This demo policy does not describe statutory exceptions or individual contractual arrangements; refer those questions to the People team."
+      }
+    ],
+    "negative_examples": [],
+    "edge_case": false,
+    "review_status": "author-written synthetic ground truth; not SME-verified"
+  },
+  {
+    "id": "Q03",
+    "question": "Can I work remotely from Spain for a week while visiting family?",
+    "category": "direct",
+    "expected_answer": "No. Overseas working is not permitted under this policy, including during a holiday.",
+    "expected_documents": [
+      "data/remote_work.md"
+    ],
+    "relevant_passages": [
+      {
+        "source_uri": "data/remote_work.md",
+        "heading": "Location and availability",
+        "exact_text": "Work remotely only from your registered UK home address or another UK location approved in writing by your line manager. Working overseas is not permitted under this policy, including during a holiday. Be available between 10:00 and 15:00 on working days, excluding your agreed lunch break."
+      }
+    ],
+    "negative_examples": [],
+    "edge_case": false,
+    "review_status": "author-written synthetic ground truth; not SME-verified"
+  },
+  {
+    "id": "Q04",
+    "question": "I have an approved hybrid arrangement. Can I claim my normal train fare for required office days?",
+    "category": "multi-document",
+    "expected_answer": "No. Hybrid working normally requires at least 2 office days a week; normal commuting is not reimbursed, including required hybrid office days.",
+    "expected_documents": [
+      "data/remote_work.md",
+      "data/expenses.md"
+    ],
+    "relevant_passages": [
+      {
+        "source_uri": "data/remote_work.md",
+        "heading": "Office attendance",
+        "exact_text": "The standard arrangement is at least 2 office days per working week, agreed with your line manager. Employees working fewer than 5 days per week agree an attendance pattern individually; this policy gives no automatic pro-rata formula. Team meetings may require attendance on a specified day."
+      },
+      {
+        "source_uri": "data/expenses.md",
+        "heading": "Travel and meals",
+        "exact_text": "Book standard-class rail travel. A business-trip evening meal may be claimed up to £30 per person, including service charges. Alcohol is not reimbursed. Normal home-to-office commuting is not reimbursed, including the office days required by the remote working policy. Taxis require advance line-manager approval unless there is an immediate safety concern; explain any exception in the claim."
+      }
+    ],
+    "negative_examples": [],
+    "edge_case": true,
+    "review_status": "author-written synthetic ground truth; not SME-verified"
+  },
+  {
+    "id": "Q05",
+    "question": "I want to buy a £140 monitor for home working. What must I do to claim it?",
+    "category": "multi-document",
+    "expected_answer": "Obtain written line-manager approval before purchase; it must fit within the £150 calendar-year allowance remaining. Submit in SpendTrack within 30 calendar days, with itemised receipt and business purpose. Reimbursement depends on eligibility and approval.",
+    "expected_documents": [
+      "data/remote_work.md",
+      "data/expenses.md"
+    ],
+    "relevant_passages": [
+      {
+        "source_uri": "data/remote_work.md",
+        "heading": "Equipment and expenses",
+        "exact_text": "IT supplies a managed laptop and one headset. The annual home-office allowance is up to £150 per calendar year for an approved chair, keyboard or monitor. Obtain written line-manager approval before purchase and submit the claim under the expenses policy. Internet subscriptions, electricity and personal phone contracts are not reimbursed."
+      },
+      {
+        "source_uri": "data/expenses.md",
+        "heading": "Eligibility and submission",
+        "exact_text": "Employees may claim reasonable, necessary business expenses through SpendTrack. Submit claims within 30 calendar days of the purchase date. Attach an itemised receipt and state the business purpose. A missing receipt requires written approval from Finance before submission; a bank statement alone is not an itemised receipt."
+      }
+    ],
+    "negative_examples": [],
+    "edge_case": true,
+    "review_status": "author-written synthetic ground truth; not SME-verified"
+  },
+  {
+    "id": "Q06",
+    "question": "What is the current claim deadline and evening meal cap: 60 days and £40?",
+    "category": "outdated-premise",
+    "expected_answer": "Correct the premise: the current rules are 30 calendar days and £30 per person including service charges; alcohol is not reimbursed. Ignore the expired version.",
+    "expected_documents": [
+      "data/expenses.md"
+    ],
+    "relevant_passages": [
+      {
+        "source_uri": "data/expenses.md",
+        "heading": "Eligibility and submission",
+        "exact_text": "Employees may claim reasonable, necessary business expenses through SpendTrack. Submit claims within 30 calendar days of the purchase date. Attach an itemised receipt and state the business purpose. A missing receipt requires written approval from Finance before submission; a bank statement alone is not an itemised receipt."
+      },
+      {
+        "source_uri": "data/expenses.md",
+        "heading": "Travel and meals",
+        "exact_text": "Book standard-class rail travel. A business-trip evening meal may be claimed up to £30 per person, including service charges. Alcohol is not reimbursed. Normal home-to-office commuting is not reimbursed, including the office days required by the remote working policy. Taxis require advance line-manager approval unless there is an immediate safety concern; explain any exception in the claim."
+      }
+    ],
+    "negative_examples": [
+      {
+        "source_uri": "negative_examples/expenses_expired.md",
+        "reason": "Expired 60-day deadline and £40 meal cap; exclude from current-policy retrieval."
+      }
+    ],
+    "edge_case": true,
+    "review_status": "author-written synthetic ground truth; not SME-verified"
+  },
+  {
+    "id": "Q07",
+    "question": "My partner is having a baby. I have 30 weeks of continuous service by the expected birth week. How much enhanced partner leave is available if I am a permanent UK employee?",
+    "category": "direct",
+    "expected_answer": "4 weeks at full base pay, in one block within 6 months of birth or placement; People must confirm eligibility and pay schedule.",
+    "expected_documents": [
+      "data/parental_leave.md"
+    ],
+    "relevant_passages": [
+      {
+        "source_uri": "data/parental_leave.md",
+        "heading": "Scope and eligibility",
+        "exact_text": "This policy describes fictional enhanced company benefits for permanent UK employees with at least 26 weeks of continuous service by the expected week of birth or placement. Contractors are outside this policy. It does not provide a complete statement of statutory entitlements; ask the People team about statutory rights or eligibility outside this enhancement."
+      },
+      {
+        "source_uri": "data/parental_leave.md",
+        "heading": "Partner benefit",
+        "exact_text": "An eligible partner may take 4 weeks at full base pay. Take the leave in one block within 6 months of birth or placement. Only one employee may use the primary carer benefit for the same child; the other may use the partner benefit if eligible."
+      },
+      {
+        "source_uri": "data/parental_leave.md",
+        "heading": "How to request",
+        "exact_text": "Notify the People team at least 15 weeks before the expected birth date, or within 7 calendar days of receiving adoption placement notification. Provide the expected date and proposed leave dates. The People team confirms eligibility and the pay schedule in writing."
+      }
+    ],
+    "negative_examples": [],
+    "edge_case": false,
+    "review_status": "author-written synthetic ground truth; not SME-verified"
+  },
+  {
+    "id": "Q08",
+    "question": "Can I take leave next week?",
+    "category": "ambiguous",
+    "expected_answer": "Ask what type of leave and the proposed dates; do not assume annual, parental or sickness leave or claim approval. If offering annual leave guidance, label it conditional.",
+    "expected_documents": [],
+    "relevant_passages": [],
+    "negative_examples": [],
+    "edge_case": true,
+    "review_status": "author-written synthetic ground truth; not SME-verified"
+  },
+  {
+    "id": "Q09",
+    "question": "I am ill during approved annual leave. How do I report it and get those days back?",
+    "category": "multi-document",
+    "expected_answer": "Report by 10:00 on the first affected working day to your manager; if unavailable email People. Self-certify up to 7 calendar days; a fit note is needed for longer absence. People reviews reclassification; restoration is not automatic.",
+    "expected_documents": [
+      "data/annual_leave.md",
+      "data/sickness_absence.md"
+    ],
+    "relevant_passages": [
+      {
+        "source_uri": "data/annual_leave.md",
+        "heading": "Illness during leave",
+        "exact_text": "If you become ill during approved annual leave, notify your line manager by 10:00 on the first affected working day and follow the sickness reporting policy. The People team reviews requests to reclassify affected days. Reclassification is not automatic."
+      },
+      {
+        "source_uri": "data/sickness_absence.md",
+        "heading": "Reporting",
+        "exact_text": "If you cannot work because of illness, telephone your line manager by 10:00 on the first affected working day. If they are unavailable, email people@northstar-demo.example by the same deadline. Tell them your likely absence duration if known; you do not need to disclose your diagnosis to colleagues."
+      },
+      {
+        "source_uri": "data/sickness_absence.md",
+        "heading": "Evidence",
+        "exact_text": "Self-certify absences of up to 7 consecutive calendar days in PeopleHub. For more than 7 consecutive calendar days, provide a fit note covering the absence. Weekends count when determining whether a fit note is required."
+      },
+      {
+        "source_uri": "data/sickness_absence.md",
+        "heading": "Illness on holiday",
+        "exact_text": "For illness during approved annual leave, use the same first-day reporting deadline and evidence rules. The People team reviews reclassification of annual leave; see the annual leave policy. This document does not guarantee that every affected day will be restored."
+      }
+    ],
+    "negative_examples": [],
+    "edge_case": true,
+    "review_status": "author-written synthetic ground truth; not SME-verified"
+  },
+  {
+    "id": "Q10",
+    "question": "I have just lost my work laptop at 20:00. Can I wait until tomorrow to report it?",
+    "category": "direct",
+    "expected_answer": "No. Report within 1 hour of discovery to security; if unable to use company email call internal extension 4400. Do not attempt a remote wipe.",
+    "expected_documents": [
+      "data/information_security.md"
+    ],
+    "relevant_passages": [
+      {
+        "source_uri": "data/information_security.md",
+        "heading": "Lost devices and incidents",
+        "exact_text": "Report a lost laptop, suspected phishing, accidental disclosure or unauthorised access to security@northstar-demo.example within 1 hour of discovery. If you cannot use company email, call the fictional internal service desk on extension 4400. Do not wait until the next working day. The security team coordinates containment; do not attempt your own remote wipe."
+      }
+    ],
+    "negative_examples": [],
+    "edge_case": false,
+    "review_status": "author-written synthetic ground truth; not SME-verified"
+  },
+  {
+    "id": "Q11",
+    "question": "Can I paste customer names and payment details into Northstar Assist because it is approved?",
+    "category": "direct",
+    "expected_answer": "No. Customer personal data, credentials and payment details are prohibited in every generative AI tool, including Northstar Assist.",
+    "expected_documents": [
+      "data/information_security.md"
+    ],
+    "relevant_passages": [
+      {
+        "source_uri": "data/information_security.md",
+        "heading": "Use of AI tools",
+        "exact_text": "Only the approved Northstar Assist workspace may process internal company information. Do not enter customer personal data, credentials or payment details into any generative AI tool, including Northstar Assist. Public AI tools may be used only with public or synthetic information. This demo pack is synthetic."
+      }
+    ],
+    "negative_examples": [],
+    "edge_case": false,
+    "review_status": "author-written synthetic ground truth; not SME-verified"
+  },
+  {
+    "id": "Q12",
+    "question": "A supplier offered me a £25 gift card. Can I accept it and put it in the Gifts Register?",
+    "category": "exception",
+    "expected_answer": "No. Gift cards must always be declined regardless of value; registration does not make acceptance permitted.",
+    "expected_documents": [
+      "data/code_of_conduct.md"
+    ],
+    "relevant_passages": [
+      {
+        "source_uri": "data/code_of_conduct.md",
+        "heading": "Gifts and hospitality",
+        "exact_text": "A non-cash gift or hospitality worth up to and including £50 may be accepted only if it cannot reasonably influence a business decision. Record it in the Gifts Register within 5 working days. Anything above £50 requires written approval from Compliance before acceptance. Cash and gift cards must always be declined, regardless of value."
+      }
+    ],
+    "negative_examples": [],
+    "edge_case": true,
+    "review_status": "author-written synthetic ground truth; not SME-verified"
+  },
+  {
+    "id": "Q13",
+    "question": "I am a permanent UK new starter in week two. Can I start the standard hybrid arrangement now?",
+    "category": "multi-document",
+    "expected_answer": "The standard policy allows a request after the first 4 weeks, subject to role suitability and written line-manager approval. It does not authorise starting the standard arrangement in week two.",
+    "expected_documents": [
+      "data/onboarding.md",
+      "data/remote_work.md"
+    ],
+    "relevant_passages": [
+      {
+        "source_uri": "data/onboarding.md",
+        "heading": "First month",
+        "exact_text": "Your line manager holds a check-in at the end of weeks 1, 2 and 4. Permanent UK employees may request hybrid working after their first 4 weeks, subject to role suitability and written line-manager approval under the remote working policy. The company home-office allowance is not an automatic joining bonus."
+      },
+      {
+        "source_uri": "data/remote_work.md",
+        "heading": "Eligibility",
+        "exact_text": "Permanent UK employees whose roles can be performed remotely may request hybrid working after completing their first 4 weeks. Hybrid arrangements require written line-manager approval. Contractors must use their engagement agreement; this policy does not grant them hybrid eligibility."
+      }
+    ],
+    "negative_examples": [],
+    "edge_case": true,
+    "review_status": "author-written synthetic ground truth; not SME-verified"
+  },
+  {
+    "id": "Q14",
+    "question": "How many days of annual leave do I personally have left today?",
+    "category": "unanswerable-live-data",
+    "expected_answer": "The corpus contains no personal leave balance. State the limitation and direct the employee to PeopleHub or People; do not calculate a balance from the 25-day entitlement.",
+    "expected_documents": [
+      "data/annual_leave.md"
+    ],
+    "relevant_passages": [
+      {
+        "source_uri": "data/annual_leave.md",
+        "heading": "Contact",
+        "exact_text": "Policy owner: Priya Shah, Head of People. Questions: people@northstar-demo.example. This policy contains no live individual leave balances."
+      }
+    ],
+    "negative_examples": [],
+    "edge_case": true,
+    "review_status": "author-written synthetic ground truth; not SME-verified"
+  },
+  {
+    "id": "Q15",
+    "question": "What is the company pension contribution percentage?",
+    "category": "unanswerable-missing-policy",
+    "expected_answer": "The corpus does not specify pension contributions. Say this cannot be answered from these documents and refer to the People team; do not invent a percentage.",
+    "expected_documents": [],
+    "relevant_passages": [],
+    "negative_examples": [],
+    "edge_case": true,
+    "review_status": "author-written synthetic ground truth; not SME-verified"
+  }
+]

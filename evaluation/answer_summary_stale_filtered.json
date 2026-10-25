@@ -1,0 +1,44 @@
+{
+ "questions": 3,
+ "retrieval": {
+  "mean": 1.0,
+  "n": 3
+ },
+ "answer": {
+  "mean": 0.667,
+  "n": 3
+ },
+ "citation": {
+  "mean": 2.0,
+  "n": 2
+ },
+ "faithfulness": 1.0,
+ "answer_fully_correct": 0.0,
+ "forbidden_leaks": 0,
+ "latency_s": {
+  "median": 0.8,
+  "p90": 2.39,
+  "max": 2.39
+ },
+ "by_category": {
+  "outdated-premise": {
+   "n": 2,
+   "answer_mean": 0.5,
+   "faithful": 2
+  },
+  "direct": {
+   "n": 1,
+   "answer_mean": 1.0,
+   "faithful": 1
+  }
+ },
+ "settings": {
+  "eval_date": "2026-10-18",
+  "generator": "openai/gpt-oss-120b",
+  "judge": "qwen/qwen3.8-27b",
+  "final_k": 5,
+  "candidates_k": 20,
+  "min_rerank_score": 0.01,
+  "include_expired": false
+ }
+}

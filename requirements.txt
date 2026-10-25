@@ -1,0 +1,6 @@
+pinecone==10.0.0
+groq==1.7.0
+python-dotenv==1.2.4
+streamlit==1.66.0
+rank-bm25==0.2.2
+pandas==3.0.6
